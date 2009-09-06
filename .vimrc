@@ -61,5 +61,5 @@ let g:fuzzy_matching_limit=50
 
 map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
-map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>t :FufFile<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
