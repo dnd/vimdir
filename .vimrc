@@ -1,0 +1,65 @@
+set nocompatible
+syntax on
+filetype plugin indent on
+runtime! macros/matchit.vim
+
+augroup myfiletypes
+  autocmd!
+  autocmd FileType haml,sql set ai sw=2 sts=2 et foldmethod=indent
+  autocmd FileType javascript set ai sw=2 sts=2 et 
+  autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et foldmethod=syntax
+  autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+  autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading=1
+  autocmd FileType ruby,eruby let g:rubycomplete_rails=1
+  autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
+augroup END
+
+set statusline=%F%m%r%h%w\ [%{&fenc}][%{&ff}][%Y]\ #%{winnr()}%=[\%03.3b,\%02.2B][%l/%L,%v][%p%%]
+set laststatus=2
+
+"split window below, and split to the right
+set sb
+set spr
+
+set cf
+set clipboard+=unnamed
+set history=256
+set autowrite
+set ruler
+set nu
+set nowrap
+set timeoutlen=1000
+
+set incsearch
+set hlsearch
+
+set cindent
+set autoindent
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case,elsif
+
+set showmatch
+set mat=5
+set vb t_vb=''
+set laststatus=2
+
+set ignorecase
+set smartcase
+
+set scrolloff=3
+
+let mapleader=","
+
+"Map autocompletion to ctrl+space
+inoremap <Nul> <C-x><C-o>
+"let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+
+"Make backspace work like other editors
+set backspace=indent,eol,start
+
+let g:fuzzy_matching_limit=50
+
+map <silent> <m-p> :cp <cr>
+map <silent> <m-n> :cn <cr>
+map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>b :FuzzyFinderBuffer<CR>
