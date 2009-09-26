@@ -14,6 +14,11 @@ augroup myfiletypes
   autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
 augroup END
 
+autocmd BufWritePost,FileWritePost * call AutoTag ()
+set tags=tags;/
+nnoremap <silent> <F8> :TlistToggle<CR>
+set updatetime=1000
+
 set statusline=%F%m%r%h%w\ [%{&fenc}][%{&ff}][%Y]\ #%{winnr()}%=[\%03.3b,\%02.2B][%l/%L,%v][%p%%]
 set laststatus=2
 

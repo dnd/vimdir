@@ -41,7 +41,7 @@ if has("gui_running")
   highlight LineNr                    guifg=#2B2B2B   guibg=#C0C0FF
   highlight Number                    guifg=#A5C261
   highlight PreProc                   guifg=#E6E1DC
-  highlight Search                    guibg=#FFFF00
+  highlight Search                    guibg=#d0c400
   highlight Statement                 guifg=#CC7833   gui=NONE
   highlight String                    guifg=#A5C261
   highlight Title                     guifg=#FFFFFF
@@ -65,12 +65,16 @@ if has("gui_running")
   highlight xmlTagName                guifg=#E8BF6A
   highlight xmlEndTag                 guifg=#E8BF6A
 
-  " Folds
-  hi Folded guifg=#d3d7cf guibg=#204a87
+  " FoldS
+  "hi Folded guifg=#d3d7cf guibg=#204a87
+  hi Folded guibg=#3e455a guifg=#f8f6d1
   hi FoldColumn guifg=#3465a4 guibg=#000000
 
   hi Pmenu guibg=#2e3436 guifg=#eeeeec
   hi PmenuSel guibg=#ffffff guifg=#1e2426
   hi PmenuSbar guibg=#555753
   hi PmenuThumb guifg=#ffffff
+
+  hi DebugBreak guibg=#6b0606
+  hi DebugStop guibg=#1a2b82
 endif
