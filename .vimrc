@@ -7,7 +7,7 @@ augroup myfiletypes
   autocmd!
   autocmd FileType haml,sql set ai sw=2 sts=2 et foldmethod=indent
   autocmd FileType javascript set ai sw=2 sts=2 et 
-  autocmd FileType cucumber,ruby,eruby,yaml set ai sw=2 sts=2 et foldmethod=syntax
+  autocmd FileType cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading=1
   autocmd FileType ruby,eruby let g:rubycomplete_rails=1
@@ -17,6 +17,8 @@ augroup END
 autocmd BufWritePost,FileWritePost * call AutoTag ()
 set tags=tags;/
 nnoremap <silent> <F8> :TlistToggle<CR>
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 set updatetime=1000
 
 set statusline=%F%m%r%h%w\ [%{&fenc}][%{&ff}][%Y]\ #%{winnr()}%=[\%03.3b,\%02.2B][%l/%L,%v][%p%%]
@@ -55,6 +57,9 @@ set scrolloff=3
 
 let mapleader=","
 
+set textwidth=80
+set fo=croqwa
+
 "Map autocompletion to ctrl+space
 inoremap <Nul> <C-x><C-o>
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"
@@ -67,4 +72,6 @@ let g:fuzzy_matching_limit=50
 map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
 map <leader>t :FufFile<CR>
-map <leader>b :FuzzyFinderBuffer<CR>
+map <leader>f :FufBuffer<CR>
+
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
