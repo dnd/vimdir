@@ -8,6 +8,7 @@ augroup myfiletypes
   autocmd FileType haml,sql set ai sw=2 sts=2 et foldmethod=indent
   autocmd FileType javascript set ai sw=2 sts=2 et 
   autocmd FileType cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
+  autocmd FileType vim set foldmethod=indent
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading=1
   autocmd FileType ruby,eruby let g:rubycomplete_rails=1
@@ -75,3 +76,5 @@ map <leader>t :FufFile<CR>
 map <leader>f :FufBuffer<CR>
 
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <F5> :Rdebugger %<CR>
+nnoremap <leader>re :RdbEval 
