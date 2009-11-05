@@ -260,8 +260,6 @@ snippet all
 	all? { |${1:e}| ${2} }
 snippet any
 	any? { |${1:e}| ${2} }
-snippet cl
-	classify { |${1:e}| ${2} }
 snippet col
 	collect { |${1:e}| ${2} }
 snippet det
@@ -286,8 +284,6 @@ snippet par
 	partition { |${1:e}|, ${2} }
 snippet rej
 	reject { |${1:e}|, ${2} }
-snippet sel
-	select { |${1:e}|, ${2} }
 snippet lam
 	lambda { |${1:args}| ${2} }
 snippet do
@@ -418,3 +414,14 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
+#cucumber snippets
+snippet cb
+	click_button "${1:name}"${2}
+snippet cl
+	click_link ${1:name}
+snippet fi
+	fill_in "${1:field}", :with => ${2:value}
+snippet hid
+	set_hidden_field "${1:field}", :to => ${2:value}
+snippet sel
+	select ${1:value}, :from => "${2:field}"${3}
