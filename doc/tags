@@ -17,7 +17,6 @@
 'NERDTreeStatusline'	NERD_tree.txt	/*'NERDTreeStatusline'*
 'NERDTreeWinPos'	NERD_tree.txt	/*'NERDTreeWinPos'*
 'NERDTreeWinSize'	NERD_tree.txt	/*'NERDTreeWinSize'*
-'Tail_Height'	tail.txt	/*'Tail_Height'*
 'Tlist_Auto_Highlight_Tag'	taglist.txt	/*'Tlist_Auto_Highlight_Tag'*
 'Tlist_Auto_Open'	taglist.txt	/*'Tlist_Auto_Open'*
 'Tlist_Auto_Update'	taglist.txt	/*'Tlist_Auto_Update'*
@@ -70,9 +69,6 @@
 :NERDTreeFromBookmark	NERD_tree.txt	/*:NERDTreeFromBookmark*
 :NERDTreeMirror	NERD_tree.txt	/*:NERDTreeMirror*
 :NERDTreeToggle	NERD_tree.txt	/*:NERDTreeToggle*
-:STail	tail.txt	/*:STail*
-:TabTail	tail.txt	/*:TabTail*
-:Tail	tail.txt	/*:Tail*
 :TlistAddFiles	taglist.txt	/*:TlistAddFiles*
 :TlistAddFilesRecursive	taglist.txt	/*:TlistAddFilesRecursive*
 :TlistClose	taglist.txt	/*:TlistClose*
@@ -89,7 +85,6 @@
 :TlistUndebug	taglist.txt	/*:TlistUndebug*
 :TlistUnlock	taglist.txt	/*:TlistUnlock*
 :TlistUpdate	taglist.txt	/*:TlistUpdate*
-:vim-tail.zsh	tail.txt	/*:vim-tail.zsh*
 AND	dbext.txt	/*AND*
 DBI	dbext.txt	/*DBI*
 ExtractSnips()	snipMate.txt	/*ExtractSnips()*
@@ -150,7 +145,6 @@ NERDTreeOptions	NERD_tree.txt	/*NERDTreeOptions*
 NERD_tree.txt	NERD_tree.txt	/*NERD_tree.txt*
 ODBC	dbext.txt	/*ODBC*
 ResetSnippets()	snipMate.txt	/*ResetSnippets()*
-Tail.txt	tail.txt	/*Tail.txt*
 Tlist_Get_Tag_Prototype_By_Line()	taglist.txt	/*Tlist_Get_Tag_Prototype_By_Line()*
 Tlist_Get_Tagname_By_Line()	taglist.txt	/*Tlist_Get_Tagname_By_Line()*
 Tlist_Set_App()	taglist.txt	/*Tlist_Set_App()*
@@ -526,6 +520,7 @@ ruby-debugger-bugs	ruby_debugger.txt	/*ruby-debugger-bugs*
 ruby-debugger-details	ruby_debugger.txt	/*ruby-debugger-details*
 ruby-debugger-installation	ruby_debugger.txt	/*ruby-debugger-installation*
 ruby-debugger-introduction	ruby_debugger.txt	/*ruby-debugger-introduction*
+ruby-debugger-issues	ruby_debugger.txt	/*ruby-debugger-issues*
 ruby-debugger-plugin-author	ruby_debugger.txt	/*ruby-debugger-plugin-author*
 ruby-debugger-quickstart	ruby_debugger.txt	/*ruby-debugger-quickstart*
 ruby-debugger-tests	ruby_debugger.txt	/*ruby-debugger-tests*
@@ -580,15 +575,16 @@ taglist-session	taglist.txt	/*taglist-session*
 taglist-todo	taglist.txt	/*taglist-todo*
 taglist-using	taglist.txt	/*taglist-using*
 taglist.txt	taglist.txt	/*taglist.txt*
-tail-about	tail.txt	/*tail-about*
-tail-commands	tail.txt	/*tail-commands*
-tail-configure	tail.txt	/*tail-configure*
-tail-mappings	tail.txt	/*tail-mappings*
 v_[%	matchit.txt	/*v_[%*
 v_]%	matchit.txt	/*v_]%*
 v_a%	matchit.txt	/*v_a%*
 v_g%	matchit.txt	/*v_g%*
 vs	surround.txt	/*vs*
+xml-plugin-callbacks	xml-plugin.txt	/*xml-plugin-callbacks*
+xml-plugin-html	xml-plugin.txt	/*xml-plugin-html*
+xml-plugin-mappings	xml-plugin.txt	/*xml-plugin-mappings*
+xml-plugin-settings	xml-plugin.txt	/*xml-plugin-settings*
+xml-plugin.txt	xml-plugin.txt	/*xml-plugin.txt*
 yS	surround.txt	/*yS*
 ySS	surround.txt	/*ySS*
 ys	surround.txt	/*ys*

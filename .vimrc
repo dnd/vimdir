@@ -78,3 +78,5 @@ map <leader>f :FufBuffer<CR>
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :Rdebugger %<CR>
 nnoremap <leader>re :RdbEval 
+
+let xml_use_xhtml = 1
