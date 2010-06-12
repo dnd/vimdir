@@ -117,6 +117,10 @@ snippet shbio
 	${1:target}.should be_instance_of(${2:class})${3}
 snippet shbko
 	${1:target}.should be_a_kind_of(${2:class})${3}
+snippet shbt
+	${1:target}.should be_true${2}
+snippet shbf
+	${1:target}.should be_false${2}
 snippet shc
 	lambda do
 	  ${4}
@@ -167,6 +171,8 @@ snippet shnt
 	lambda { ${1} }.should_not throw_symbol(:${2:symbol})${3}
 snippet shr
 	${1:mock}.should_receive(:${2:message})${3}
+snippet shrw
+	${1:mock}.should_receive(:${2:message}).with(${3:args})${4}
 snippet shre
 	${1:target}.should raise_error(${2:error})${3}
 snippet shrt

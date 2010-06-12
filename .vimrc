@@ -3,6 +3,12 @@ syntax on
 filetype plugin indent on
 runtime! macros/matchit.vim
 
+augroup mkd
+  au BufRead,BufNewFile *.mkd,*.md,*.markdown setfiletype mkd
+  au BufRead,BufNewFile *.md setfiletype mkd
+  au BufRead,BufNewFile *.markdown setfiletype mkd
+augroup END
+
 augroup myfiletypes
   autocmd!
   autocmd FileType haml,sql set ai sw=2 sts=2 et foldmethod=indent
@@ -13,6 +19,7 @@ augroup myfiletypes
   autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading=1
   autocmd FileType ruby,eruby let g:rubycomplete_rails=1
   autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
+  autocmd FileType mkd set ai formatoptions=tcroqn2 comments=n:>
 augroup END
 
 autocmd BufWritePost,FileWritePost * call AutoTag ()
@@ -59,7 +66,7 @@ set scrolloff=3
 let mapleader=","
 
 set textwidth=80
-set fo=croqwa
+set fo=croqw
 
 "Map autocompletion to ctrl+space
 inoremap <Nul> <C-x><C-o>
@@ -71,12 +78,15 @@ set backspace=indent,eol,start
 let g:fuzzy_matching_limit=50
 
 " camelcasemotion plugin mappings
+no W w
+no B b
+no E e
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
-sunmap e 
+"sunmap e 
 
 omap <silent> iw <Plug>CamelCaseMotion_iw
 xmap <silent> iw <Plug>CamelCaseMotion_iw
