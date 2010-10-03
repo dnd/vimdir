@@ -1,4 +1,8 @@
 set nocompatible
+
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 syntax on
 filetype plugin indent on
 runtime! macros/matchit.vim
@@ -12,7 +16,7 @@ augroup END
 augroup myfiletypes
   autocmd!
   autocmd FileType haml,sql set ai sw=2 sts=2 et foldmethod=indent
-  autocmd FileType javascript set ai sw=2 sts=2 et 
+  autocmd FileType html,javascript set ai sw=2 sts=2 et 
   autocmd FileType cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType vim set foldmethod=indent
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -67,6 +71,7 @@ let mapleader=","
 
 set textwidth=80
 set fo=croqw
+set switchbuf=usetab
 
 "Map autocompletion to ctrl+space
 inoremap <Nul> <C-x><C-o>
@@ -74,6 +79,13 @@ inoremap <Nul> <C-x><C-o>
 
 "Make backspace work like other editors
 set backspace=indent,eol,start
+
+nmap <silent> <leader><space> :nohlsearch<CR>
+inoremap jj <ESC>
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+nnoremap ; :
 
 let g:fuzzy_matching_limit=50
 
@@ -99,7 +111,7 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
 map <leader>t :FufFile<CR>
-map <leader>f :FufBuffer<CR>
+map <leader>o :FufBuffer<CR>
 
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :Rdebugger %<CR>
