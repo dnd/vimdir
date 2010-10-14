@@ -110,8 +110,8 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 
 map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
-map <leader>t :FufFile<CR>
-map <leader>o :FufBuffer<CR>
+"map <leader>t :FufFile<CR>
+"map <leader>o :FufBuffer<CR>
 
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :Rdebugger %<CR>
