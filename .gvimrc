@@ -1,4 +1,4 @@
-set guifont=Monospace\ 9
+set guifont=Inconsolata\ 10
 colorscheme railscasts
 
 set mousehide
