@@ -86,6 +86,7 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 nnoremap ; :
+"nnoremap : ;
 
 let g:fuzzy_matching_limit=50
 
@@ -116,5 +117,8 @@ map <silent> <m-n> :cn <cr>
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :Rdebugger %<CR>
 nnoremap <leader>re :RdbEval 
+nnoremap <leader>sr :%s/
 
 let xml_use_xhtml = 1
+" prevent supertab from hijacking endwise
+let g:SuperTabCrMapping = 0
