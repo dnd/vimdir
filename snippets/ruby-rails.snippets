@@ -1,0 +1,14 @@
+snippet mai
+	add_index :${1:table}, ${2:column}
+snippet mcn
+	constrain :${1:table} do |t|
+	  ${2}
+	end
+snippet mcnr
+	t.${1:column} :reference => {:${2:table} => :${3:id}}${4}
+snippet mcnw
+	t.${1:column} :whitelist => %w{${2:list}}${3}
+snippet mct
+	create_table :${1:name} do |t|
+	  ${2}
+	end
