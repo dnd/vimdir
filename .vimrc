@@ -11,13 +11,14 @@ augroup mkd
   au BufRead,BufNewFile *.mkd,*.md,*.markdown setfiletype mkd
   au BufRead,BufNewFile *.md setfiletype mkd
   au BufRead,BufNewFile *.markdown setfiletype mkd
+  au BufRead,BufNewFile *.citrus setfiletype citrus
 augroup END
 
 augroup myfiletypes
   autocmd!
   autocmd FileType haml,sql set ai sw=2 sts=2 et foldmethod=indent
   autocmd FileType html,javascript set ai sw=2 sts=2 et 
-  autocmd FileType cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
+  autocmd FileType citrus,cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType vim set foldmethod=indent
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading=1
@@ -35,6 +36,8 @@ set updatetime=1000
 
 set statusline=%F%m%r%h%w\ [%{&fenc}][%{&ff}][%Y]\ #%{winnr()}%=[\%03.3b,\%02.2B][%l/%L,%v][%p%%]
 set laststatus=2
+set backupdir=/tmp
+set directory=/tmp
 
 "split window below, and split to the right
 set sb
