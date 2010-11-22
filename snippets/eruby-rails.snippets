@@ -1,0 +1,76 @@
+snippet conf
+	<% content_for :${1:yield_label_in_layout} do -%>
+	  ${2}
+	<% end -%>
+snippet cs
+	<%= collection_select ${1:object}, ${2:method}, ${3:collection}, ${4:value_method}, ${5:text_method}%>
+snippet ff
+	<% form_for @${1:model} do |f| -%>
+	  ${2}
+	<% end -%>
+snippet ffcb
+	<%= f.check_box :${1:attribute} %>
+snippet ffe
+	<% error_messages_for :${1:model} -%>
+	
+	<% form_for @${2:model} do |f| -%>
+	  ${3}
+	<% end -%>
+snippet ffff
+	<%= f.file_field :${1:attribute} %>
+snippet ffhf
+	<%= f.hidden_field :${1:attribute} %>
+snippet ffl
+	<%= f.label :${1:attribute}%>
+snippet ffpf
+	<%= f.password_field :${1:attribute} %>
+snippet ffrb
+	<%= f.radio_button :${1:attribute}, :${2:tag_value} %>
+snippet ffs
+	<%= f.submit "${1:Submit}"%>
+snippet ffta
+	<%= f.text_area :${1:attribute} %>
+snippet fftf
+	<%= f.text_field :${1:attribute} %>
+snippet fields
+	<% fields_for :${1:model}, @$1 do |${2:f}| -%>
+	  ${3}
+	<% end -%>
+snippet for
+	<% if !${1:list}.blank? -%>
+	  <% for ${2:item} in $1 -%>
+	    ${3}
+	  <% end -%>
+	<% else -%>
+	  ${4}
+	<% end -%>
+snippet ft
+	<% form_tag(${1}) do -%>
+	  ${2}
+	<% end -%>
+snippet it
+	<%= image_tag "${1}" %>
+snippet jitc
+	<%= javascript_include_tag ${1:all}, :cache => ${2:true} %>${3}
+snippet jit
+	<%= javascript_include_tag ${1} %>${2}
+snippet ltr
+	<%= link_to ${1:text}, ${2:model}_path(${3:instance}) %>${4}
+snippet lti
+	<%= link_to ${1:text}, ${2:model}s_path %>${5}
+snippet lt
+	<%= link_to "${1}", ${2:dest} %>
+snippet ofcfs
+	<%= options_from_collection_for_select ${1:collection}, ${2:value_method}, ${3:text_method} %>${4}
+snippet rf
+	<%= render :file => "${1:file}"${2} %>
+snippet rp
+	<%= render :partial => "${1:file}"${2} %>
+snippet rt
+	<%= render :template => "${1:file}"${2} %>
+snippet sltc
+	<%= stylesheet_link_tag ${1}, :cache => ${2:true} %>${3}
+snippet slt
+	<%= stylesheet_link_tag "${1}" %>${2}
+snippet st
+	<%= submit_tag "${1:Save changes}"%>${2}
