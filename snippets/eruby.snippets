@@ -1,26 +1,44 @@
-snippet <<
-	<%${1}%>${2}
-snippet ==
-	<%=${1}%>${2}
+snippet :
+	:${1:key} => ${2:"value"}${3}
+snippet :bt
+	:${1:key} => true${22}
+snippet :bf
+	:${1:key} => false${2}
+snippet -
+	<% ${1} -%>
+snippet =
+	<%=${1}%>
+snippet each
+	<% ${1:collection}.each do |${2:member}|  -%>
+	  ${3}
+	<% end -%>
+snippet eachwi
+	<% ${1:collection}.each_with_index do |${2:member}, ${3:idx}| -%>
+	  ${4}
+	<% end -%>
 snippet end
 	<% end -%>
 snippet if
-	<% if ${1} %>
-		${2}
+	<% if ${1}  -%>
+	  ${2}
 	<% end -%>
+snippet iif
+	<% if ${1}  -%> ${2} <% end -%>
 snippet ife
-	<% if ${1} %>
-		${2}
-	<% else %>
-		${3}
+	<% if ${1}  -%>
+	  ${2}
+	<% else -%>
+	  ${3}
 	<% end -%>
 snippet unless
-	<% unless ${1} %>
-		${2}
+	<% unless ${1} -%>
+	  ${2}
 	<% end -%>
+snippet iunless
+	<% unless ${1} -%> ${2} <% end -%>
 snippet unlesse
-	<% unless ${1} %>
-		${2}
-	<% else %>
-		${3}
+	<% unless ${1} -%>
+	  ${2}
+	<% else -%>
+	  ${3}
 	<% end -%>

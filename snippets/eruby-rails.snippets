@@ -1,5 +1,5 @@
-snippet conf
-	<% content_for :${1:yield_label_in_layout} do -%>
+snippet cf
+	<%content_for :${1:block} do -%>
 	  ${2}
 	<% end -%>
 snippet cs
@@ -48,6 +48,12 @@ snippet ft
 	<% form_tag(${1}) do -%>
 	  ${2}
 	<% end -%>
+snippet fls
+	<%= flash[:${1:notice}] %>
+snippet h
+	<%= h ${1} %>${2}
+snippet hs
+	html_safe
 snippet it
 	<%= image_tag "${1}" %>
 snippet jitc
@@ -59,7 +65,7 @@ snippet ltr
 snippet lti
 	<%= link_to ${1:text}, ${2:model}s_path %>${5}
 snippet lt
-	<%= link_to "${1}", ${2:dest} %>
+	<%= link_to ${1:text}, ${2:path} %>
 snippet ofcfs
 	<%= options_from_collection_for_select ${1:collection}, ${2:value_method}, ${3:text_method} %>${4}
 snippet rf
@@ -74,3 +80,5 @@ snippet slt
 	<%= stylesheet_link_tag "${1}" %>${2}
 snippet st
 	<%= submit_tag "${1:Save changes}"%>${2}
+snippet yield
+	<%= yield :${1:content} %>${2}
