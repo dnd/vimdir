@@ -122,6 +122,9 @@ nnoremap <silent> <F5> :Rdebugger %<CR>
 nnoremap <leader>re :RdbEval 
 nnoremap <leader>sr :%s/
 
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+nnoremap <leader>a :Ack 
+
 let xml_use_xhtml = 1
 " prevent supertab from hijacking endwise
 let g:SuperTabCrMapping = 0
