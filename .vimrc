@@ -39,6 +39,9 @@ set laststatus=2
 set backupdir=/tmp
 set directory=/tmp
 
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
 "split window below, and split to the right
 set sb
 set spr
@@ -128,3 +131,18 @@ nnoremap <leader>a :Ack
 let xml_use_xhtml = 1
 " prevent supertab from hijacking endwise
 let g:SuperTabCrMapping = 0
+
+map <silent> <m-1> :tabn 1<CR>
+map <silent> <m-2> :tabn 2<CR>
+map <silent> <m-3> :tabn 3<CR>
+map <silent> <m-4> :tabn 4<CR>
+map <silent> <m-5> :tabn 5<CR>
+map <silent> <m-6> :tabn 6<CR>
+map <silent> <m-7> :tabn 7<CR>
+map <silent> <m-8> :tabn 8<CR>
+map <silent> <m-9> :tabn 9<CR>
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
