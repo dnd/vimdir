@@ -125,7 +125,7 @@ nnoremap <silent> <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :Rdebugger %<CR>
 nnoremap <leader>re :RdbEval 
 nnoremap <leader>sr :%s/
-nnoremap <leader>ft :CommandTFlush<CR>
+"nnoremap <leader>ff :CommandTFlush<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack 
