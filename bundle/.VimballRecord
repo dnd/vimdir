@@ -1,0 +1,1 @@
+html5.vba: call delete('html5.vim/autoload/htmlcomplete.vim')
