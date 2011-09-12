@@ -12,11 +12,12 @@ augroup mkd
   au BufRead,BufNewFile *.md setfiletype mkd
   au BufRead,BufNewFile *.markdown setfiletype mkd
   au BufRead,BufNewFile *.citrus setfiletype citrus
+  au BufRead,BufNewFile *.slim setfiletype slim
 augroup END
 
 augroup myfiletypes
   autocmd!
-  autocmd FileType haml,sql set ai sw=2 sts=2 et foldmethod=indent
+  autocmd FileType haml,sql,slim set ai sw=2 sts=2 et foldmethod=indent
   autocmd FileType html,javascript set ai sw=2 sts=2 et 
   autocmd FileType citrus,cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType vim set foldmethod=indent
