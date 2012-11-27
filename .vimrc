@@ -55,6 +55,7 @@ set ruler
 set nu
 set nowrap
 set timeoutlen=1000
+set relativenumber
 
 set incsearch
 set hlsearch
@@ -148,3 +149,26 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+function! CloseHiddenBuffers()
+    " Tableau pour memoriser la visibilite des buffers                                                                                      
+    let visible = {}
+    " Pour chaque onglet...
+    for t in range(1, tabpagenr('$'))
+        " Et pour chacune de ses fenetres...
+        for b in tabpagebuflist(t)
+            " On indique que le buffer est visible.
+            let visible[b] = 1
+        endfor
+    endfor
+    " Pour chaque numero de buffer possible...
+    for b in range(1, bufnr('$'))
+        " Si b est un numero de buffer valide et qu'il n'est pas visible, on le
+        " supprime.
+        if bufexists(b) && !has_key(visible, b)
+            " On ferme donc tous les buffers qui ne valent pas 1 dans le tableau et qui
+            " sont pourtant charges en memoire.
+            execute 'bwipeout' b
+        endif
+    endfor
+endfun
