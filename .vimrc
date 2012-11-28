@@ -150,6 +150,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+let g:quickfixsigns_classes=['loc', 'qfl', 'vcsdiff', 'breakpoints']
+
 function! CloseHiddenBuffers()
     " Tableau pour memoriser la visibilite des buffers                                                                                      
     let visible = {}
