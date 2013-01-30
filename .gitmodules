@@ -22,3 +22,9 @@
 [submodule "bundle/linediff.vim"]
 	path = bundle/linediff.vim
 	url = git://github.com/AndrewRadev/linediff.vim.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
