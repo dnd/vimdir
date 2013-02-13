@@ -13,6 +13,7 @@ augroup mkd
   au BufRead,BufNewFile *.markdown setfiletype mkd
   au BufRead,BufNewFile *.citrus setfiletype citrus
   au BufRead,BufNewFile *.slim setfiletype slim
+  au BufRead,BufNewFile *.coffee setfiletype coffee
 augroup END
 
 augroup myfiletypes
@@ -26,6 +27,7 @@ augroup myfiletypes
   autocmd FileType ruby,eruby let g:rubycomplete_rails=1
   autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
   autocmd FileType mkd set ai formatoptions=tcroqn2 comments=n:>
+  autocmd FileType coffee setl foldmethod=indent sw=2 et
 augroup END
 
 autocmd BufWritePost,FileWritePost * call AutoTag ()
