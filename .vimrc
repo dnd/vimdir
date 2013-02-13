@@ -30,7 +30,7 @@ augroup END
 
 autocmd BufWritePost,FileWritePost * call AutoTag ()
 set tags=tags;/
-nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 set updatetime=1000
@@ -129,7 +129,8 @@ nnoremap <leader>sr :%s/
 "nnoremap <leader>ff :CommandTFlush<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack!
+nnoremap <leader>vv :Ack! <cword><CR>
 
 let xml_use_xhtml = 1
 " prevent supertab from hijacking endwise
