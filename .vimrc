@@ -26,6 +26,7 @@ augroup myfiletypes
   autocmd FileType ruby,eruby let g:rubycomplete_rails=1
   autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
   autocmd FileType mkd set ai formatoptions=tcroqn2 comments=n:>
+  autocmd FileType gitcommit set tw=72 fo=tcroqw
 augroup END
 
 autocmd BufWritePost,FileWritePost * call AutoTag ()
