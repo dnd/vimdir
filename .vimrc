@@ -13,6 +13,7 @@ augroup mkd
   au BufRead,BufNewFile *.markdown setfiletype mkd
   au BufRead,BufNewFile *.citrus setfiletype citrus
   au BufRead,BufNewFile *.slim setfiletype slim
+  au BufRead,BufNewFile *.coffee setfiletype coffee
 augroup END
 
 augroup myfiletypes
