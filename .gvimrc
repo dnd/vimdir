@@ -1,15 +1,15 @@
 set guifont=Inconsolata\ 10
-colorscheme railscasts
+colorscheme codeschool
 
 set mousehide
 set mouse=a
 set guioptions-=T
 set guioptions-=m
 set vb t_vb="
-set lines=999
+set lines=80
 set columns=140
 "set guiheadroom=-150
-winpos 1900 0
+winpos 1900 25
 
 inoremap <C-space> <C-x><C-o>
 

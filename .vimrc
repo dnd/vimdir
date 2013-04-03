@@ -31,6 +31,7 @@ augroup myfiletypes
 augroup END
 
 autocmd BufWritePost,FileWritePost * call AutoTag ()
+colorscheme xoria256
 set tags=tags;/
 nnoremap <silent> <F8> :TagbarToggle<CR>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
