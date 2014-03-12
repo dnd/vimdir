@@ -1,5 +1,5 @@
 set guifont=Inconsolata\ 10
-colorscheme codeschool
+colorscheme solarized
 
 set mousehide
 set mouse=a
