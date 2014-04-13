@@ -14,7 +14,6 @@ augroup mkd
   au BufRead,BufNewFile *.citrus setfiletype citrus
   au BufRead,BufNewFile *.slim setfiletype slim
   au BufRead,BufNewFile *.coffee setfiletype coffee
-  au BufRead,BufNewFile *.sls setfiletype yaml
 augroup END
 
 augroup myfiletypes
