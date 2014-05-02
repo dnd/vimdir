@@ -105,6 +105,7 @@ nnoremap ; :
 "nnoremap : ;
 
 let g:fuzzy_matching_limit=50
+let g:ctrlp_show_hidden=1
 
 " camelcasemotion plugin mappings
 no W w
