@@ -63,7 +63,7 @@ set ruler
 set nu
 set nowrap
 set timeoutlen=1000
-set relativenumber
+"set relativenumber
 
 set incsearch
 set hlsearch
@@ -88,6 +88,7 @@ let mapleader=","
 set textwidth=80
 set fo=croqw
 set switchbuf=usetab
+set pastetoggle=<F3>
 
 "Map autocompletion to ctrl+space
 inoremap <Nul> <C-x><C-o>
@@ -128,7 +129,7 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 
 map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
-"map <leader>t :FufFile<CR>
+map <leader>t :CtrlP<CR>
 "map <leader>o :FufBuffer<CR>
 
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
