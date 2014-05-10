@@ -30,6 +30,7 @@ augroup myfiletypes
   autocmd FileType mkd set ai formatoptions=tcroqn2 comments=n:>
   autocmd FileType gitcommit set tw=72 fo=tcroqw
   autocmd FileType coffee setl foldmethod=indent sw=2 et
+  autocmd FileType python set ai sw=4 sts=4 et foldmethod=syntax
 augroup END
 
 autocmd BufWritePost,FileWritePost * call AutoTag ()
