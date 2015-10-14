@@ -1,4 +1,4 @@
-set guifont=Inconsolata\ 10
+set guifont=Inconsolata\ 11
 colorscheme solarized
 
 set mousehide

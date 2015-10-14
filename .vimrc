@@ -87,6 +87,7 @@ set smartcase
 set scrolloff=3
 
 let mapleader=","
+let maplocalleader='\'
 
 set textwidth=80
 set fo=croqw
