@@ -170,6 +170,9 @@ let g:quickfixsigns_classes=['loc', 'qfl', 'vcsdiff', 'breakpoints']
 "Powerline settings
 let g:Powerline_symbols = 'unicode'
 
+"gist.vim settings
+let g:gist_post_private = 1
+
 function! CloseHiddenBuffers()
     " Tableau pour memoriser la visibilite des buffers                                                                                      
     let visible = {}
