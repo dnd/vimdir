@@ -111,6 +111,7 @@ nnoremap ; :
 
 let g:fuzzy_matching_limit=50
 let g:ctrlp_show_hidden=1
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " camelcasemotion plugin mappings
 no W w
@@ -175,6 +176,8 @@ let g:gist_post_private = 1
 
 "vim-closetag settings
 let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.html.erb'
+
+let g:jsx_ext_required = 0
 
 function! CloseHiddenBuffers()
     " Tableau pour memoriser la visibilite des buffers                                                                                      
