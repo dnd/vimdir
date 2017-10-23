@@ -19,7 +19,8 @@ augroup END
 
 augroup myfiletypes
   autocmd!
-  autocmd FileType haml,sql,slim set ai sw=2 sts=2 et foldmethod=indent
+  autocmd FileType haml,sql,slim,css set ai sw=2 sts=2 et foldmethod=indent
+  autocmd FileType groovy set sw=2 sts=2 et foldmethod=indent
   autocmd FileType html,javascript set ai sw=2 sts=2 et 
   autocmd FileType citrus,cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType vim set foldmethod=indent
@@ -45,10 +46,12 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 set updatetime=1000
 
 "ensure modeline is set
+set relativenumber
 set modeline
 set statusline=%F%m%r%h%w\ [%{&fenc}][%{&ff}][%Y]\ #%{winnr()}%=[\%03.3b,\%02.2B][%l/%L,%v][%p%%]
 set laststatus=2
 set backupdir=/tmp
+set backupcopy=yes "ensures that file watchers trigger
 set directory=/tmp
 
 let g:syntastic_enable_signs=1
