@@ -46,7 +46,6 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 set updatetime=1000
 
 "ensure modeline is set
-set relativenumber
 set modeline
 set statusline=%F%m%r%h%w\ [%{&fenc}][%{&ff}][%Y]\ #%{winnr()}%=[\%03.3b,\%02.2B][%l/%L,%v][%p%%]
 set laststatus=2
@@ -69,7 +68,14 @@ set ruler
 set nu
 set nowrap
 set timeoutlen=1000
-"set relativenumber
+
+"relative number only when in focus, or INSERT
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained * set relativenumber
+  autocmd BufLeave,FocusLost   * set norelativenumber
+augroup END
 
 set incsearch
 set hlsearch
