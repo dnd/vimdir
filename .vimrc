@@ -21,7 +21,7 @@ augroup myfiletypes
   autocmd!
   autocmd FileType haml,sql,slim,css set ai sw=2 sts=2 et foldmethod=indent
   autocmd FileType groovy set sw=2 sts=2 et foldmethod=indent
-  autocmd FileType html,javascript set ai sw=2 sts=2 et 
+  autocmd FileType html,javascript set ai sw=2 sts=2 et
   autocmd FileType citrus,cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType vim set foldmethod=indent
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -33,6 +33,9 @@ augroup myfiletypes
   autocmd FileType coffee setl foldmethod=indent sw=2 et
   autocmd FileType python set ai sw=4 sts=4 et foldmethod=syntax
 augroup END
+
+"strip trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 autocmd BufWritePost,FileWritePost * call AutoTag ()
 let g:solarized_termcolors=256
@@ -131,7 +134,7 @@ map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
-"sunmap e 
+"sunmap e
 
 omap <silent> iw <Plug>CamelCaseMotion_iw
 xmap <silent> iw <Plug>CamelCaseMotion_iw
@@ -148,12 +151,12 @@ map <leader>t :CtrlP<CR>
 
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 "nnoremap <silent> <F5> :Rdebugger %<CR>
-nnoremap <leader>re :RdbEval 
+nnoremap <leader>re :RdbEval
 nnoremap <leader>sr :%s/
 "nnoremap <leader>ff :CommandTFlush<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack! 
+nnoremap <leader>a :Ack!
 nnoremap <leader>vv :Ack! <cword><CR>
 
 let xml_use_xhtml = 1
@@ -188,8 +191,14 @@ let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.html.erb'
 
 let g:jsx_ext_required = 0
 
+"vim-ruby
+if !exists('g:ruby_indent_assignment_style')
+  " Possible values: "variable", "hanging"
+  let g:ruby_indent_assignment_style = 'variable'
+endif
+
 function! CloseHiddenBuffers()
-    " Tableau pour memoriser la visibilite des buffers                                                                                      
+    " Tableau pour memoriser la visibilite des buffers
     let visible = {}
     " Pour chaque onglet...
     for t in range(1, tabpagenr('$'))
