@@ -156,7 +156,7 @@ nnoremap <leader>sr :%s/
 "nnoremap <leader>ff :CommandTFlush<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack!
+nnoremap <leader>a :Ack!<space>
 nnoremap <leader>vv :Ack! <cword><CR>
 
 let xml_use_xhtml = 1
