@@ -15,14 +15,14 @@ augroup mkd
   au BufRead,BufNewFile *.slim setfiletype slim
   au BufRead,BufNewFile *.coffee setfiletype coffee
   au BufRead,BufNewFile *.sls setfiletype yaml
-  au BufNewFile,BufRead *.vue,*.wpy set filetype=vue.html
+  au BufNewFile,BufRead *.vue,*.wpy setlocal filetype=vue
 augroup END
 
 augroup myfiletypes
   autocmd!
   autocmd FileType haml,sql,slim,css set ai sw=2 sts=2 et foldmethod=indent
   autocmd FileType groovy set sw=2 sts=2 et foldmethod=indent
-  "autocmd FileType html,javascript set ai sw=2 sts=2 et
+  autocmd FileType html,javascript set ai sw=2 sts=2 et
   autocmd FileType citrus,cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType vim set foldmethod=indent
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
