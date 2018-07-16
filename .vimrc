@@ -3,7 +3,24 @@ set nocompatible
 "call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'syntastic')
 execute pathogen#infect()
+
+let g:ale_linters = {
+      \  'javascript': ['eslint'],
+      \}
+
+let g:ale_fixers = {
+      \  'javascript': ['eslint'],
+      \}
+
+let g:ale_fix_on_save = 1
+
+let g:ale_lint_on_text_changed = 'never'
+
+let g:ycm_filetype_blacklist = {
+      \'ruby': 1
+      \}
 
 syntax on
 filetype plugin indent on
@@ -24,7 +41,7 @@ augroup myfiletypes
   autocmd!
   autocmd FileType haml,sql,slim,css set ai sw=2 sts=2 et foldmethod=indent
   autocmd FileType groovy set sw=2 sts=2 et foldmethod=indent
-  autocmd FileType html,javascript set ai sw=2 sts=2 et
+  autocmd FileType html,javascript,vue set ai sw=2 sts=2 et
   autocmd FileType citrus,cucumber,ruby,eruby,yaml,vim set ai sw=2 sts=2 et foldmethod=syntax
   autocmd FileType vim set foldmethod=indent
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -190,7 +207,7 @@ let g:Powerline_symbols = 'unicode'
 let g:gist_post_private = 1
 
 "vim-closetag settings
-let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.html.erb'
+let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.html.erb,*.vue'
 
 let g:jsx_ext_required = 0
 
