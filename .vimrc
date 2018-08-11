@@ -193,6 +193,9 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack!<space>
 nnoremap <leader>vv :Ack! <cword><CR>
 
+"NERDCommenter
+let g:NERDSpaceDelims = 1
+
 let xml_use_xhtml = 1
 " prevent supertab from hijacking endwise
 let g:SuperTabCrMapping = 0
