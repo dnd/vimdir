@@ -3,15 +3,29 @@ set nocompatible
 "call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 let g:pathogen_disabled = []
+
+call add(g:pathogen_disabled, 'html5.vim')
+call add(g:pathogen_disabled, 'markdownsyntax')
+call add(g:pathogen_disabled, 'typescript-vim')
+call add(g:pathogen_disabled, 'vim-coffee-script')
+call add(g:pathogen_disabled, 'vim-cucumber')
+call add(g:pathogen_disabled, 'vim-haml')
+call add(g:pathogen_disabled, 'vim-javascript')
+call add(g:pathogen_disabled, 'vim-jsx')
+call add(g:pathogen_disabled, 'vim-ruby')
+call add(g:pathogen_disabled, 'vim-slim')
+call add(g:pathogen_disabled, 'vim-vue')
 call add(g:pathogen_disabled, 'syntastic')
 execute pathogen#infect()
 
 let g:ale_linters = {
       \  'javascript': ['eslint'],
+      \  'vue': ['eslint'],
       \}
 
 let g:ale_fixers = {
       \  'javascript': ['eslint'],
+      \  'vue': ['eslint'],
       \}
 
 let g:ale_fix_on_save = 1
@@ -143,7 +157,7 @@ nnoremap ; :
 
 let g:fuzzy_matching_limit=50
 let g:ctrlp_show_hidden=1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
 
 " camelcasemotion plugin mappings
 no W w
