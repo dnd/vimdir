@@ -157,7 +157,7 @@ nnoremap ; :
 
 let g:fuzzy_matching_limit=50
 let g:ctrlp_show_hidden=1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\W'
 
 " camelcasemotion plugin mappings
 no W w
@@ -195,6 +195,7 @@ nnoremap <leader>vv :Ack! <cword><CR>
 
 "NERDCommenter
 let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 
 let xml_use_xhtml = 1
 " prevent supertab from hijacking endwise
