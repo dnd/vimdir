@@ -26,6 +26,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
       \  'javascript': ['eslint'],
       \  'vue': ['eslint'],
+      \  'terraform': ['terraform'],
       \}
 
 let g:ale_fix_on_save = 1
@@ -33,7 +34,9 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 
 let g:ycm_filetype_blacklist = {
-      \'ruby': 1
+      \'ruby': 1,
+      \'vue': 1,
+      \'javascript': 1,
       \}
 
 syntax on
